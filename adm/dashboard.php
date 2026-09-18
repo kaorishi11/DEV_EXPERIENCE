@@ -1,9 +1,7 @@
 <?php
-include 'conexao.php';
-session_start();
-if (!isset($_SESSION['usuario_id']) || $_SESSION['usuario_tipo'] !== 'adm') {
-    header("Location: ../login.php");
-    exit();
+include '../conexao.php';
+if (!isset($_SESSION['id']) || $_SESSION['tipo'] != 'admin') {
+    header("Location: ../index.php"); exit;
 }
 ?>
 <!DOCTYPE html>
